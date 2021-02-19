@@ -20,6 +20,6 @@ describe('Request headers', async () => {
   });
 
   it('should request json or xml', async () => {
-    expect(await evoClient.doIt()).to.be.equal(200);
+    expect(await evoClient.init()).to.be.equal(200);
   });
 });
