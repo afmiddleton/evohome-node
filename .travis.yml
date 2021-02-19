@@ -1,0 +1,2 @@
+# COVERALLS_REPO_TOKEN for private repos
+after_success: npm run coverage
