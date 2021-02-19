@@ -1,6 +1,7 @@
 const { expect } = require('chai');
 const nock = require('nock');
 const evoClient = require('./index.js');
+const headersAccept = require('./header').accept;
 
 describe('Request headers', async () => {
   const tccHost = 'https://tccna.honeywell.com';
@@ -9,7 +10,7 @@ describe('Request headers', async () => {
   beforeEach(() => {
     nock(tccHost)
       .get(tccPath)
-      .matchHeader('accept', 'application/json')
+      .matchHeader('accept', headersAccept)
       .reply(200, {});
     nock(tccHost).get(tccPath).reply(400, {});
   });
