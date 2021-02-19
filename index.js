@@ -1,5 +1,5 @@
 const axios = require('axios');
-const { headers } = require('./header');
+const { headers } = require('./request-headers');
 
 const tccHost = 'https://tccna.honeywell.com';
 const tccPath = '/WebAPI/emea/api/v1';

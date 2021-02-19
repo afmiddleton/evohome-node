@@ -1,7 +1,7 @@
 const { expect } = require('chai');
 const nock = require('nock');
 const evoClient = require('./index.js');
-const headersAccept = require('./header').accept;
+const headersAccept = require('./request-headers').accept;
 
 describe('Request headers', async () => {
   const tccHost = 'https://tccna.honeywell.com';
