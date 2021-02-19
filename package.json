@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "test:cucumber": "cucumber-js",
     "test:lint": "eslint . --ext .js,.json --ignore-pattern node_modules/",
     "test:unit-test": "nyc --reporter=html --reporter=text mocha index.spec.js $(find . -name '*.spec.js' -not -path './build/*' -not -path './node_modules/*')",
     "test": "npm run test:lint && npm run test:unit-test"
@@ -24,6 +25,7 @@
   },
   "homepage": "https://github.com/alanmiddleton-ibm/nodejs-template#readme",
   "devDependencies": {
+    "@cucumber/cucumber": "^7.0.0",
     "chai": "^4.3.0",
     "coveralls": "^3.1.0",
     "eslint": "^7.2.0",
